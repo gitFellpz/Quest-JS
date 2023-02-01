@@ -1,4 +1,4 @@
-function teste(){
+function verificadorCampos(){
     event.preventDefault()
 
     const nome = document.getElementById('nome')
@@ -52,8 +52,13 @@ function teste(){
         RemoverAdicionar(mensagem)
         camposObrigatorios[3].classList.remove('c__ativado')
     }
-}
 
+    // Código abaixo é apenas para UX (usuário saber que o formulário foi enviado com sucesso)
+
+    if((nome.value != "") && (email.value != "") && (telefone.value != "") && (mensagem.value != "")){
+        alert('Formulário enviado com sucesso')
+    }
+}
 
 function AdicionarRemover(variavel){
     variavel.classList.add('borda__vermelha')
