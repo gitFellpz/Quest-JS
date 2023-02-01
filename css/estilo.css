@@ -1,7 +1,86 @@
 @import url(./reset.css);
 @import url(./variaveis.css);
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
 
 body{
     font-family: var(--fonte__padrao);
+    background-image: url(../images/bg-repeat.jpg);
+    background-repeat:  repeat-x;
+    background-size: contain;
+}
+
+.conteudo{
+    display: flex;
+    max-width: 1000px;
+    align-items: center;
+    height: 100vh;
+    padding: 0 10%;
+    margin: auto;
+    gap: 50px;
+}
+
+.titulo__principal{
+    font-size: 1.7em;
+    color: var(--branco);
+    margin-bottom: 20px;
+    font-weight: 900;
+}
+
+.texto{
+    color: var(--branco);
+    font-weight: 400;
+}
+
+.formulario{
+    background-color: var(--branco);
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    width: 600px;
+}
+
+input, textarea{
+    border: 1px solid black;
+    padding: 8px;
+    border-radius: 5px;
+    font-weight: 700;
+    margin-top: 6px;
+}
+
+.mensagem{
+    font-family: var(--fonte__padrao);
+}
+
+.obrigatorio{
+    font-weight: 500;
+    margin-top: 5px;
+}
+
+.enviar{
+    background-color: var(--verde);
+    border: none;
+    color: var(--branco);
+    padding: 12px 0;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.c__obrigatorio{
+    font-size: 10px;
+    margin-top: 2px;
+    margin-left: 5px;
+    color: var(--vermelho__verificador);
+    opacity: 0;
+}
+
+.c__obrigatorio.c__ativado{
+    opacity: 1;
+}
+
+.borda__verde{
+    border: 2px solid var(--verde__verificador);
+}
+
+.borda__vermelha{
+    border: 2px solid var(--vermelho__verificador);
 }
